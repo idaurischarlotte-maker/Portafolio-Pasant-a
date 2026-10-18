@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Portafolio de Pasantía · Idauris De León</title>
+<meta name="description" content="Portafolio Digital de Evidencias — Práctica Profesional (PAP-400), UAPA. Idauris Charlotte De León Matos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --navy:#152238; --navy2:#1F3A5C; --ink:#1B2433; --muted:#5A6577; --line:#DDE3EA; --bg:#F6F8FB; --white:#FFFFFF;
+  --teal:#0F6E6A; --blue:#2B6CB0; --purple:#7B4FA0; --gold:#B7791F; --coral:#C05640; --green:#2F855A; --sun:#E8C872;
+  --f-display:"DM Serif Display", Georgia, serif;
+  --f-body:"Public Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --maxw:1120px; color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.65}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left));padding-right:max(16px,env(safe-area-inset-right))}
+h1,h2,h3{font-family:var(--f-display);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h2{font-size:clamp(1.8rem,3.6vw,2.6rem)}
+h3{font-size:1.45rem}
+h4{margin:0 0 6px;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+p{margin:0}
+a{color:var(--teal)}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:4px}
+.eyebrow{font-family:var(--f-mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(21,34,56,.96);backdrop-filter:blur(6px)}
+.nav .wrap{display:flex;align-items:center;gap:18px;min-height:58px}
+.brand{font-family:var(--f-display);font-size:1.15rem;color:#fff;text-decoration:none;white-space:nowrap}
+.brand span{color:var(--sun)}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav a.lk{display:block;padding:7px 13px;border-radius:999px;color:#C9D4E3;text-decoration:none;font-size:.88rem;font-weight:500;white-space:nowrap}
+.nav a.lk:hover,.nav a.lk.on{color:var(--navy);background:var(--sun)}
+@media (max-width:760px){.brand{display:none}.nav ul{margin-left:0}}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 55%,#0F4E5C 100%);color:#fff}
+.hero .blob{position:absolute;border-radius:50%;opacity:.55;filter:blur(2px)}
+.hero .b1{width:380px;height:380px;background:var(--teal);right:-120px;top:-140px}
+.hero .b2{width:220px;height:220px;background:var(--coral);right:180px;bottom:-110px;opacity:.45}
+.hero .b3{width:140px;height:140px;background:var(--sun);left:-50px;bottom:40px;opacity:.35}
+.hero .b4{width:90px;height:90px;background:var(--purple);right:90px;top:180px;opacity:.6}
+.hero .wrap{position:relative;padding-block:64px 58px;display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:48px;align-items:center}
+.hero .eyebrow{color:var(--sun)}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.4rem);margin-top:14px}
+.hero h1 em{color:var(--sun);font-style:italic}
+.hero .sub{margin-top:12px;color:#CFE8E6;font-size:1.1rem;max-width:56ch}
+.meta{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px;border-top:1px solid rgba(255,255,255,.18);padding-top:22px}
+.meta dt{font-family:var(--f-mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:#9FB2CB}
+.meta dd{margin:2px 0 0;font-weight:600}
+.photo{aspect-ratio:4/5;max-width:100%;border-radius:18px;background:linear-gradient(160deg,var(--teal),var(--purple));display:grid;place-items:center;position:relative;overflow:hidden;border:4px solid rgba(255,255,255,.85);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.photo span{font-family:var(--f-display);font-size:5.2rem;color:#fff}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.hero .wrap{grid-template-columns:1fr;gap:28px;padding-block:44px}.photo{max-width:200px}.meta{grid-template-columns:1fr}}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:-34px;position:relative;z-index:2}
+.stat{border-radius:14px;padding:20px 18px;color:#fff;box-shadow:0 10px 24px rgba(21,34,56,.16)}
+.stat b{display:block;font-family:var(--f-display);font-size:2.4rem;line-height:1;font-weight:400}
+.stat span{font-size:.92rem;opacity:.95}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:20px}}
+
+section.block{padding-block:64px}
+.head{display:grid;gap:10px;margin-bottom:32px;max-width:70ch}
+.head p{color:var(--muted)}
+.two{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px}
+.two>*{min-width:0}
+@media (max-width:820px){.two{grid-template-columns:1fr;gap:28px}}
+.prose{display:grid;gap:14px;font-size:1.04rem;max-width:66ch}
+.expect{background:var(--teal);color:#fff;border-radius:16px;padding:28px}
+.expect h3{font-size:1.35rem;margin-bottom:14px}
+.expect ul{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+.expect li{padding-left:28px;position:relative}
+.expect li::before{content:"✓";position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:var(--sun);color:var(--navy);font-size:.75rem;font-weight:700;display:grid;place-items:center;margin-top:3px}
+
+/* centro */
+.dark{background:var(--navy);color:#E6ECF3}
+.dark .eyebrow{color:var(--sun)}
+.dark h2{color:#fff}
+.lines{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
+.lines div{border-radius:12px;padding:18px;color:#fff}
+.lines b{display:block;font-size:1.02rem;margin-bottom:4px}
+@media (max-width:820px){.lines{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:440px){.lines{grid-template-columns:1fr}}
+
+/* evidencias */
+.timeline{display:grid;gap:30px}
+.task{--c:var(--teal);--t:#E6F3F2;background:var(--white);border-radius:18px;overflow:hidden;box-shadow:0 8px 26px rgba(21,34,56,.08);border-top:8px solid var(--c)}
+.task .top{display:grid;grid-template-columns:120px minmax(0,1fr);gap:22px;padding:26px 28px 0;align-items:start}
+.badge{background:var(--c);color:#fff;border-radius:14px;padding:14px 8px;text-align:center}
+.badge b{display:block;font-family:var(--f-display);font-size:2.6rem;line-height:1;font-weight:400}
+.badge span{font-family:var(--f-mono);font-size:.68rem;letter-spacing:.08em}
+.task h3{color:var(--c)}
+.task .obj{margin-top:10px}
+.shot{display:block;margin:22px 28px 0;background:var(--t);border-radius:12px;padding:12px;text-decoration:none}
+.shot img{display:block;width:100%;height:auto;border-radius:8px}
+.shot small{display:block;margin-top:8px;color:var(--muted);font-size:.82rem;text-align:center}
+.task .body{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;padding:22px 28px}
+.task .body>*{min-width:0}
+.task h4{color:var(--c)}
+.task ul{margin:0;padding-left:18px;display:grid;gap:6px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font-size:.8rem;padding:4px 10px;border-radius:999px;background:var(--t);color:var(--ink);border:1px solid rgba(0,0,0,.05)}
+.task .foot{display:flex;flex-wrap:wrap;gap:10px;padding:0 28px 26px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:600;font-size:.92rem;text-decoration:none;background:var(--c);color:#fff;border:2px solid var(--c)}
+.btn.ghost{background:transparent;color:var(--c)}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:16px;height:16px}
+@media (max-width:720px){.task .top{grid-template-columns:1fr}.badge{display:flex;align-items:center;gap:12px;justify-content:flex-start;padding:10px 16px}.badge b{font-size:1.8rem}.task .body{grid-template-columns:1fr}.shot{margin:18px 16px 0}.task .top,.task .body{padding-left:18px;padding-right:18px}.task .foot{padding:0 18px 22px}}
+
+/* reflexión */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.cols article{border-radius:16px;padding:26px;color:#fff;display:grid;gap:12px;align-content:start;min-width:0}
+.cols h3{font-size:1.35rem}
+.cols h4{color:#FFE9B0;margin-top:6px}
+.cols ul{margin:0;padding-left:18px;display:grid;gap:7px}
+@media (max-width:900px){.cols{grid-template-columns:1fr}}
+
+.final{background:linear-gradient(135deg,var(--navy),#123A4A);color:#E6ECF3;border-radius:20px;padding:44px clamp(20px,4vw,48px)}
+.final h2{color:#fff}
+.quote{margin-top:26px;font-family:var(--f-display);font-size:clamp(1.4rem,2.6vw,1.9rem);color:var(--sun);border-left:4px solid var(--sun);padding-left:20px}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.pillars div{background:rgba(255,255,255,.07);border-radius:12px;padding:16px;border-top:3px solid var(--sun)}
+.pillars b{color:#fff;display:block}
+@media (max-width:760px){.pillars{grid-template-columns:1fr}}
+footer{background:var(--navy);color:#9FB2CB;font-size:.85rem;margin-top:64px}
+footer .wrap{padding-block:30px;display:flex;flex-wrap:wrap;gap:10px 30px;justify-content:space-between}
+footer strong{color:#fff}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Secciones">
+  <div class="wrap">
+    <a class="brand" href="#portada">Idauris <span>De León</span></a>
+    <ul>
+      <li><a class="lk" href="#portada">Portada</a></li>
+      <li><a class="lk" href="#presentacion">Presentación</a></li>
+      <li><a class="lk" href="#centro">Centro de práctica</a></li>
+      <li><a class="lk" href="#evidencias">Evidencias</a></li>
+      <li><a class="lk" href="#reflexion">Auto-reflexión</a></li>
+      <li><a class="lk" href="#conclusiones">Conclusiones</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="portada">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="blob b4"></div>
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Universidad Abierta Para Adultos · UAPA · Escuela de Psicología</p>
+      <h1>Portafolio Digital <em>de Evidencias</em></h1>
+      <p class="sub">Práctica Profesional – Pasantía Virtual en Psicología Industrial y Gestión Humana</p>
+      <dl class="meta">
+        <div><dt>Pasante</dt><dd>Idauris Charlotte De León Matos</dd></div>
+        <div><dt>Matrícula</dt><dd>100038456</dd></div>
+        <div><dt>Carrera</dt><dd>Licenciatura en Psicología Industrial</dd></div>
+        <div><dt>Asignatura</dt><dd>Práctica Profesional – Pasantía (PAP-400)</dd></div>
+        <div><dt>Facilitadora</dt><dd>Nohely Bellido De Delgado</dd></div>
+        <div><dt>Fecha</dt><dd>17 de octubre de 2026</dd></div>
+      </dl>
+    </div>
+    <div class="photo" role="img" aria-label="Fotografía profesional de la pasante">
+      <span>IC</span>
+      <!-- Para colocar la foto: suba foto.jpg a la carpeta assets y quite el comentario de la línea siguiente -->
+      <!-- <img src="assets/foto.jpg" alt="Idauris Charlotte De León Matos"> -->
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="stats">
+    <div class="stat" style="background:var(--teal)"><b>6</b><span>evidencias entregadas</span></div>
+    <div class="stat" style="background:var(--blue)"><b>3</b><span>organizaciones analizadas</span></div>
+    <div class="stat" style="background:var(--gold)"><b>3</b><span>marcos normativos aplicados</span></div>
+    <div class="stat" style="background:var(--coral)"><b>100 %</b><span>modalidad virtual</span></div>
+  </div>
+</div>
+
+<main>
+<section class="block" id="presentacion">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow" style="color:var(--teal)">1 · Presentación personal</p>
+      <h2>Quién soy y con qué expectativas inicié</h2>
+    </div>
+    <div class="two">
+      <div class="prose">
+        <p>Soy estudiante de término de la Licenciatura en Psicología Industrial en la UAPA, recinto Santo Domingo. Trabajo como Analista de Recursos Humanos en SD · Aliados Empresariales, una firma de asesoría empresarial, gestión humana e inteligencia de negocio.</p>
+        <p>Mi recorrido laboral incluye experiencia en ARM Racing Imports, el Instituto Tecnológico de Santo Domingo (INTEC), Centro Vida y Familia y Siriux International. En esos espacios desarrollé una base sólida en procesos administrativos, atención a personas y gestión de talento.</p>
+        <p>Hoy mi trabajo diario se centra en reclutamiento y selección, evaluación de candidatos y apoyo a proyectos de consultoría organizacional. Manejo Microsoft 365, Google Workspace, Odoo, Dynamics 365, Power Automate y herramientas de inteligencia artificial aplicadas a la gestión humana.</p>
+      </div>
+      <aside class="expect">
+        <h3>Expectativas iniciales de la pasantía</h3>
+        <ul>
+          <li>Llevar la teoría de la Psicología Industrial a casos reales de empresas dominicanas.</li>
+          <li>Fortalecer mi dominio del Código de Trabajo (Ley 16-92) y la Ley 87-01.</li>
+          <li>Aprender a proponer soluciones con criterio de consultora, no solo a ejecutar tareas.</li>
+          <li>Ganar seguridad para presentar y defender propuestas en los encuentros virtuales.</li>
+          <li>Integrar la tecnología a la gestión humana sin perder el enfoque en las personas.</li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section class="block dark" id="centro">
+  <div class="wrap">
+    <div class="head">
+      <p class="eyebrow">2 · Contexto de la práctica</p>
+      <h2>Centro de práctica: SD · Aliados Empresariales</h2>
+    </div>
+    <div class="prose" style="color:#D9E2EE">
+      <p>SD · Aliados Empresariales (SD · AE) es una firma dominicana de asesoría gerencial dirigida por la Lic. Sheilly Decamps, psicóloga con maestría en Mercadeo y más de 14 años de experiencia en gestión humana, inteligencia de negocio, diseño organizacional y cumplimiento regulatorio.</p>
+      <p>La firma se posiciona como socio estratégico de medianas y grandes organizaciones. Desarrollé la pasantía en modalidad virtual, aplicando cada asignación a la realidad de la firma o de sus clientes.</p>
+    </div>
+    <div class="lines">
+      <div style="background:var(--blue)"><b>Asesoría Empresarial</b>Diseño organizacional, procesos y consultoría gerencial.</div>
+      <div style="background:var(--teal)"><b>Recursos Humanos</b>Reclutamiento, evaluación, outsourcing y políticas.</div>
+      <div style="background:var(--purple)"><b>Business Intelligence</b>Indicadores y análisis de datos para decidir.</div>
+      <div style="background:var(--coral)"><b>Cambia de Trabajo</b>Portal de empleo y banco de elegibles.</div>
+    </div>
+    <p style="margin-top:18px;color:#9FB2CB;font-size:.9rem">Iuken Business Center, Los Prados, Santo Domingo · Rol de la pasante: Analista de Recursos Humanos</p>
+  </div>
+</section>
+
+<section class="block" id="evidencias">
+  <div class="wrap">
+    <div class="head" style="margin-inline:auto;text-align:center">
+      <p class="eyebrow" style="color:var(--teal)">3 · Evidencias de aprendizaje</p>
+      <h2>Asignaciones completadas, en orden cronológico</h2>
+      <p>Cada ficha muestra el objetivo, lo que realicé, la evidencia tangible y las herramientas aplicadas. Toca la imagen para ampliarla o abre el documento completo en PDF.</p>
+    </div>
+
+    <div class="timeline">
+
+      <article class="task" style="--c:var(--teal);--t:#E6F3F2">
+        <div class="top">
+          <div class="badge"><b>01</b><span>AGOSTO 2026</span></div>
+          <div>
+            <h3>Informe de Análisis del Reglamento de Práctica Profesional (Pasantía) de la UAPA</h3>
+            <p class="obj"><strong>Objetivo.</strong> Analizar el reglamento que regula la pasantía: su objetivo, su base legal y sus aspectos principales, desde la mirada de la asesoría en gestión humana.</p>
+          </div>
+        </div>
+        <a class="shot" href="assets/evidencia-1.webp" target="_blank" rel="noopener"><img src="assets/evidencia-1.webp" alt="Portada, introducción y cuadro sinóptico del informe" loading="lazy"><small>Evidencia: portada, introducción y cuadro sinóptico del informe</small></a>
+        <div class="body">
+          <div><h4>Lo que realicé</h4><ul>
+            <li>Expliqué el objetivo del reglamento (Resolución 07-2022) y su vínculo con la Ley 139-01 de Educación Superior.</li>
+            <li>Elaboré un cuadro sinóptico con cinco criterios: base legal, modelo MECCA, objetivos, convenios y compromisos del pasante.</li>
+            <li>Analicé el Comité de Pasantías, la distribución de la nota (60/40) y la exoneración por experiencia profesional.</li></ul></div>
+          <div><h4>Evidencia entregada</h4><p>Informe en Word de 7 páginas con portada, índice, cuadro sinóptico, conclusión, declaración de autoría y bibliografía APA.</p>
+            <h4 style="margin-top:16px">Herramientas</h4><div class="chips"><span>Microsoft Word</span><span>Reglamento UAPA (Res. 07-2022)</span><span>Ley 139-01</span><span>Modelo MECCA</span><span>Normas APA</span></div></div>
+        </div>
+        <div class="foot"><a class="btn" href="documentos/01-informe-analisis-reglamento.pdf" target="_blank" rel="noopener">Ver documento (PDF)</a></div>
+      </article>
+
+      <article class="task" style="--c:var(--blue);--t:#E8F0FA">
+        <div class="top">
+          <div class="badge"><b>02</b><span>AGOSTO 2026</span></div>
+          <div>
+            <h3>Reglamento de Pasantía: derechos, deberes y evaluación del pasante</h3>
+            <p class="obj"><strong>Objetivo.</strong> Identificar los derechos y deberes del pasante según el reglamento vigente y explicar cómo se compone la calificación final.</p>
+          </div>
+        </div>
+        <a class="shot" href="assets/evidencia-2.webp" target="_blank" rel="noopener"><img src="assets/evidencia-2.webp" alt="Portada y páginas sobre derechos, deberes y evaluación" loading="lazy"><small>Evidencia: portada, deberes y tabla de evaluación</small></a>
+        <div class="body">
+          <div><h4>Lo que realicé</h4><ul>
+            <li>Derivé los derechos del pasante a partir de los compromisos de la empresa receptora (art. 8).</li>
+            <li>Organicé los deberes del pasante según los artículos 10, 11 y 12.</li>
+            <li>Expliqué la nota final: 60 puntos del supervisor de la empresa y 40 del facilitador, con mínimo de 70 (arts. 36-38).</li></ul></div>
+          <div><h4>Evidencia entregada</h4><p>Informe en Word de 6 páginas con tabla de evaluación y reflexión personal.</p>
+            <h4 style="margin-top:16px">Herramientas</h4><div class="chips"><span>Microsoft Word</span><span>Reglamento de Práctica Profesional</span><span>Tabla de ponderación</span><span>Análisis normativo</span></div></div>
+        </div>
+        <div class="foot"><a class="btn" href="documentos/02-reglamento-derechos-deberes-evaluacion.pdf" target="_blank" rel="noopener">Ver documento (PDF)</a></div>
+      </article>
+
+      <article class="task" style="--c:var(--purple);--t:#F1EAF7">
+        <div class="top">
+          <div class="badge"><b>03</b><span>AGOSTO 2026</span></div>
+          <div>
+            <h3>Modernización digital e inteligencia artificial en el proceso de reclutamiento y selección</h3>
+            <p class="obj"><strong>Objetivo.</strong> Diagnosticar un proceso de reclutamiento manual, rediseñarlo con herramientas digitales e IA, y explicar por qué la IA no reemplaza al psicólogo industrial.</p>
+          </div>
+        </div>
+        <a class="shot" href="assets/evidencia-3.webp" target="_blank" rel="noopener"><img src="assets/evidencia-3.webp" alt="Diapositivas de la presentación sobre IA en reclutamiento" loading="lazy"><small>Evidencia: portada, cuellos de botella y soluciones, impacto esperado y conclusión</small></a>
+        <div class="body">
+          <div><h4>Lo que realicé</h4><ul>
+            <li>Identifiqué tres cuellos de botella: CV dispersos, agenda manual y evaluación subjetiva.</li>
+            <li>Rediseñé el flujo en cuatro etapas: atracción, filtrado con IA, evaluación psicométrica digital y agenda automatizada.</li>
+            <li>Definí los dos momentos en que el criterio humano es indispensable: validación de resultados y entrevista final.</li></ul></div>
+          <div><h4>Evidencia entregada</h4><p>Presentación de 16 diapositivas para el encuentro virtual, aplicada a SD · AE.</p>
+            <h4 style="margin-top:16px">Herramientas</h4><div class="chips"><span>PowerPoint</span><span>Jotform</span><span>Google Drive</span><span>Microsoft 365 / Outlook</span><span>WhatsApp Business</span><span>Filtrado con IA</span><span>Mapeo de procesos</span></div></div>
+        </div>
+        <div class="foot"><a class="btn" href="documentos/03-modernizacion-digital-ia-reclutamiento.pdf" target="_blank" rel="noopener">Ver presentación (PDF)</a></div>
+      </article>
+
+      <article class="task" style="--c:var(--gold);--t:#FBF3E4">
+        <div class="top">
+          <div class="badge"><b>04</b><span>SEPTIEMBRE 2026</span></div>
+          <div>
+            <h3>Política Institucional de Compensación, Beneficios y Bienestar Laboral (SDAE-PI-RH-001)</h3>
+            <p class="obj"><strong>Objetivo.</strong> Redactar una política oficial que estructure la planificación, ejecución y evaluación de las compensaciones y el bienestar, con base en la Ley 16-92 y la Ley 87-01.</p>
+          </div>
+        </div>
+        <a class="shot" href="assets/evidencia-4.webp" target="_blank" rel="noopener"><img src="assets/evidencia-4.webp" alt="Portada, salario emocional y marco legal de la política" loading="lazy"><small>Evidencia: portada, tabla de salario emocional y marco legal</small></a>
+        <div class="body">
+          <div><h4>Lo que realicé</h4><ul>
+            <li>Redacté la política con encabezado corporativo, código, versión y siete secciones numeradas.</li>
+            <li>Cité los artículos aplicables del Código de Trabajo y de la Ley 87-01 para cada beneficio de ley.</li>
+            <li>Diseñé cinco beneficios de salario emocional, cuatro iniciativas de bienestar y la matriz de roles.</li></ul></div>
+          <div><h4>Evidencia entregada</h4><p>Política institucional en Word de 8 páginas, presentada en el encuentro virtual.</p>
+            <h4 style="margin-top:16px">Herramientas</h4><div class="chips"><span>Microsoft Word</span><span>Código de Trabajo (Ley 16-92)</span><span>Ley 87-01</span><span>Formato de política corporativa</span><span>Matriz de roles</span></div></div>
+        </div>
+        <div class="foot"><a class="btn" href="documentos/04-politica-compensacion-beneficios-bienestar.pdf" target="_blank" rel="noopener">Ver documento (PDF)</a></div>
+      </article>
+
+      <article class="task" style="--c:var(--coral);--t:#FBEDE8">
+        <div class="top">
+          <div class="badge"><b>05</b><span>SEPTIEMBRE 2026</span></div>
+          <div>
+            <h3>Desarrollo Organizacional, capacitación, planes de carrera y rol del psicólogo industrial (estudio de caso Grupo Darfo)</h3>
+            <p class="obj"><strong>Objetivo.</strong> Analizar cómo una empresa en crecimiento del sector arquitectura y construcción gestiona su desarrollo organizacional, la capacitación y los planes de carrera.</p>
+          </div>
+        </div>
+        <a class="shot" href="assets/evidencia-5.webp" target="_blank" rel="noopener"><img src="assets/evidencia-5.webp" alt="Portada y desarrollo del estudio de caso" loading="lazy"><small>Evidencia: portada y desarrollo del estudio de caso</small></a>
+        <div class="body">
+          <div><h4>Lo que realicé</h4><ul>
+            <li>Analicé la estructura en tres pilares y el plan de contratación por fases.</li>
+            <li>Revisé los programas de capacitación normativa y de liderazgo, y las rutas para identificar alto potencial.</li>
+            <li>Describí los tres roles del psicólogo industrial: facilitador, diseñador y líder del cambio.</li></ul></div>
+          <div><h4>Evidencia entregada</h4><p>Estudio de caso de 12 páginas y presentación de 10 diapositivas para el encuentro virtual.</p>
+            <h4 style="margin-top:16px">Herramientas</h4><div class="chips"><span>Word</span><span>PowerPoint</span><span>Modelo de DO por fases</span><span>Detección de necesidades de capacitación</span><span>Planes de carrera</span></div></div>
+        </div>
+        <div class="foot"><a class="btn" href="documentos/05-estudio-caso-desarrollo-organizacional.pdf" target="_blank" rel="noopener">Ver documento (PDF)</a></div>
+      </article>
+
+      <article class="task" style="--c:var(--green);--t:#E7F5EC">
+        <div class="top">
+          <div class="badge"><b>06</b><span>OCTUBRE 2026</span></div>
+          <div>
+            <h3>Sistema digital de instrumentos y KPIs de Gestión Humana para el Club Libanés</h3>
+            <p class="obj"><strong>Objetivo.</strong> Diseñar un sistema digital que reemplace los registros informales: instrumentos estandarizados, base de datos de la vida laboral y KPIs para la gerencia.</p>
+          </div>
+        </div>
+        <a class="shot" href="assets/evidencia-6.webp" target="_blank" rel="noopener"><img src="assets/evidencia-6.webp" alt="Portada, tablero de KPIs y base de datos del sistema" loading="lazy"><small>Evidencia: portada, tablero de KPIs y base de datos</small></a>
+        <div class="body">
+          <div><h4>Lo que realicé</h4><ul>
+            <li>Diseñé cuatro instrumentos: evaluación del desempeño (ED-01), medidas disciplinarias (MD-02), reconocimiento y mérito (RM-03) y descansos y licencias (DL-04).</li>
+            <li>Estructuré una base de datos en Excel con el ID de cada colaborador y trazabilidad de cada registro.</li>
+            <li>Definí la fórmula, el objetivo y la meta de cada KPI, y probé el sistema con datos de ejemplo.</li></ul></div>
+          <div><h4>Evidencia entregada</h4><p>Informe en Word de 15 páginas con formularios, base de datos y tablero de KPIs.</p>
+            <h4 style="margin-top:16px">Herramientas</h4><div class="chips"><span>Excel</span><span>Word</span><span>Código de Trabajo (arts. 42 y 88)</span><span>Evaluación por competencias</span><span>KPIs de Gestión Humana</span></div></div>
+        </div>
+        <div class="foot"><a class="btn" href="documentos/06-sistema-digital-gestion-humana.pdf" target="_blank" rel="noopener">Ver documento (PDF)</a></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reflexion" style="padding-top:20px">
+  <div class="wrap">
+    <div class="head" style="margin-inline:auto;text-align:center">
+      <p class="eyebrow" style="color:var(--teal)">4 · Auto-reflexión sobre el aprendizaje</p>
+      <h2>Lo que superé, lo que fortalecí y lo que sigue</h2>
+    </div>
+    <div class="cols">
+      <article style="background:var(--blue)">
+        <h3>Retos de la modalidad virtual</h3>
+        <ul>
+          <li><strong>Organizar el tiempo.</strong> Combiné la pasantía con mi trabajo diario usando un calendario semanal y bloques fijos para cada entrega.</li>
+          <li><strong>Trabajar sin supervisión presencial.</strong> Aprendí a validar avances por escrito y a pedir retroalimentación a tiempo.</li>
+          <li><strong>Comunicar por pantalla.</strong> Los encuentros virtuales me obligaron a ser más clara, visual y concreta.</li>
+          <li><strong>Pasar de lo ficticio a lo real.</strong> Aplicar los casos a empresas reales exigió rigor y cuidado con la información confidencial.</li>
+        </ul>
+      </article>
+      <article style="background:var(--teal)">
+        <h3>Habilidades fortalecidas</h3>
+        <h4>Técnicas</h4>
+        <ul>
+          <li>Redacción de políticas e informes institucionales.</li>
+          <li>Aplicación del Código de Trabajo, la Ley 87-01 y el reglamento UAPA.</li>
+          <li>Diseño de instrumentos, bases de datos y KPIs.</li>
+          <li>Uso de IA y automatización en reclutamiento.</li>
+        </ul>
+        <h4>Blandas</h4>
+        <ul>
+          <li>Pensamiento crítico y criterio consultivo.</li>
+          <li>Autogestión y disciplina.</li>
+          <li>Comunicación escrita y oral en entornos virtuales.</li>
+          <li>Apertura a la retroalimentación.</li>
+        </ul>
+      </article>
+      <article style="background:var(--purple)">
+        <h3>Lecciones y aspectos a mejorar</h3>
+        <ul>
+          <li>Una propuesta vale cuando la empresa la puede ejecutar y medir.</li>
+          <li>La tecnología apoya; la decisión sobre las personas es profesional y ética.</li>
+          <li>Debo cuidar que mis textos suenen naturales y propios, sin perder precisión técnica.</li>
+          <li>Quiero profundizar en evaluación psicométrica y análisis de indicadores.</li>
+          <li>Planificaré las entregas con más margen para la revisión final.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="conclusiones" style="padding-top:20px">
+  <div class="wrap">
+    <div class="final">
+      <p class="eyebrow" style="color:var(--sun)">5 · Conclusiones y valoración final</p>
+      <h2 style="margin-top:8px">El impacto de la pasantía en mi formación</h2>
+      <div class="prose" style="margin-top:18px">
+        <p>La pasantía conectó lo aprendido en la carrera con problemas reales de las organizaciones dominicanas. Empecé entendiendo el reglamento que la rige y terminé diseñando un sistema completo de gestión humana para un cliente real. En cada asignación tuve que diagnosticar, proponer y justificar, que es lo que hace un psicólogo industrial en su ejercicio profesional.</p>
+        <p>Trabajar sobre SD · AE y sus clientes me permitió ver el impacto directo de una buena política, un proceso bien diseñado o un sistema de indicadores claro. También confirmó que la gestión humana es estratégica: ordena el crecimiento, protege a la empresa en lo legal y cuida a las personas.</p>
+        <p>Cierro esta etapa con más seguridad técnica, mejor manejo del marco legal y una visión más consultiva de mi rol. Valoro la experiencia como muy positiva y como base sólida para mi ejercicio profesional.</p>
+      </div>
+      <div class="pillars">
+        <div><b>Integración</b>Teoría aplicada a casos reales.</div>
+        <div><b>Marco legal</b>Dominio práctico de la Ley 16-92, la Ley 87-01 y el reglamento UAPA.</div>
+        <div><b>Rol consultivo</b>De ejecutar tareas a proponer soluciones.</div>
+      </div>
+      <p class="quote">«La tecnología acelera los procesos; el criterio humano les da sentido.»</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><strong>Idauris Charlotte De León Matos</strong> · Matrícula 100038456</span>
+    <span>Práctica Profesional – Pasantía (PAP-400) · UAPA, recinto Santo Domingo · Octubre 2026</span>
+  </div>
+</footer>
+
+<script>
+const links=[...document.querySelectorAll(".nav a.lk")];
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(l=>l.classList.toggle("on",l.getAttribute("href")==="#"+e.target.id))}}),{rootMargin:"-45% 0px -50% 0px"});
+links.forEach(l=>{const s=document.querySelector(l.getAttribute("href"));if(s)io.observe(s)});
+</script>
+</body>
+</html>
